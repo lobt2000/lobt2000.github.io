@@ -1,0 +1,32 @@
+.header {
+  margin-bottom: 1.45rem;
+  max-width: 44rem;
+}
+
+.kicker,
+.kickerActive {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.kickerActive {
+  color: var(--accent);
+}
+
+.title {
+  font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+  letter-spacing: -0.03em;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 2.6rem;
+  height: 2px;
+  margin: 0.7rem 0 0.85rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}

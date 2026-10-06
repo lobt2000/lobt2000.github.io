@@ -1,0 +1,34 @@
+.shell {
+  min-height: 100vh;
+}
+
+.layout {
+  display: block;
+}
+
+.main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+.section {
+  min-height: auto;
+  padding: 5rem 0 2.5rem;
+  scroll-margin-top: calc(var(--nav-height) + 0.75rem);
+}
+
+@media (min-width: 960px) {
+  .layout {
+    display: grid;
+    grid-template-columns: var(--rail-width) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem 5rem 1.25rem;
+  }
+}

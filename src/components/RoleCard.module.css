@@ -1,0 +1,96 @@
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1.15rem;
+  padding: 1.2rem 1.25rem 1.25rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent));
+}
+
+.card:hover {
+  border-color: rgba(99, 102, 241, 0.45);
+  transform: translateY(-2px);
+  box-shadow: var(--panel-hover);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.period {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.meta {
+  margin: 0.3rem 0 0.6rem;
+  color: #c7d2fe;
+  font-size: 0.9rem;
+}
+
+.summary {
+  margin: 0 0 0.85rem;
+  color: var(--ink-muted);
+}
+
+.related {
+  list-style: none;
+  margin: 0 0 0.9rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.related li {
+  font-size: 0.74rem;
+  background: rgba(30, 41, 59, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+}
+
+.details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.details summary::-webkit-details-marker {
+  display: none;
+}
+
+.details summary::after {
+  content: ' +';
+  color: var(--ink-muted);
+}
+
+.details[open] summary::after {
+  content: ' –';
+}
+
+.details ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--ink-muted);
+  display: grid;
+  gap: 0.4rem;
+}
